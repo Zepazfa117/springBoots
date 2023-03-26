@@ -18,7 +18,7 @@ public class Application implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		String password = "springboot";
-		for (int i = 0; i < 3; i++){
+		for (int i = 0; i < args.length; i++){
 			String passwordBCrypt = passwordEncoder.encode(password);
 			System.out.println(passwordBCrypt);
 		}
