@@ -31,7 +31,6 @@ public class CategoriaServiceImpl implements ICategoriaService{
         CategoriaResponseRest response = new CategoriaResponseRest();
 
         try {
-
             List<Categoria> categoria = (List<Categoria>) categoriaDao.findAll();
             response.getCategoriaResponse().setCategoria(categoria);
             response.setMetadata("respuesta OK", "00", "respuesta exitosa");
