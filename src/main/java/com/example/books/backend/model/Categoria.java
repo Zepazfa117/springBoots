@@ -8,6 +8,17 @@ import java.io.Serializable;
 public class Categoria implements Serializable {
 
     private static final long serialVersionUID = -880827573443288326L;
+
+    public Categoria() {
+        super();
+    }
+
+    public Categoria(Long id, String nombre, String descripcion) {
+        this.id = id;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -38,9 +49,4 @@ public class Categoria implements Serializable {
         this.descripcion = descripcion;
     }
 
-    public Categoria(Long id, String nombre, String descripcion) {
-        this.id = id;
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-    }
 }

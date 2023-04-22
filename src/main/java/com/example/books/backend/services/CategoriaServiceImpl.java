@@ -94,7 +94,7 @@ public class CategoriaServiceImpl implements ICategoriaService{
             response.setMetadata("Respuesta NO OK", "-1","Error al grabar categoria");
             return new ResponseEntity<CategoriaResponseRest>(response, HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        response.setMetadata("respuesta ok", "00", "categoria creada");
+        response.setMetadata("respuesta OK", "00", "categoria creada");
         return new ResponseEntity<CategoriaResponseRest>(response, HttpStatus.OK); // devuelve 200;
     }
 
